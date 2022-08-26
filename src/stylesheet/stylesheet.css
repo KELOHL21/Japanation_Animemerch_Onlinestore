@@ -1,0 +1,868 @@
+
+
+/* body{
+   background-color: #2e5090;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}   */
+
+body{
+   background-image: linear-gradient(to bottom, #2e5090, #1e3664, #0f2a49, #0f2d46, #062136);
+   color: white;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Header starts */
+.nav_container{
+   text-align: center;
+   width: 100%;
+   z-index: 999;
+}
+
+@media screen and (min-width:1000px){
+   .nav_container{
+       display: flex;
+       justify-content: space-between;
+   }
+}
+
+nav{
+   position: absolute;
+   text-align: left;
+   top: 100%;
+   background-color: #6781C6;
+   width: 100%;
+   display: none;
+}
+
+@media screen and (min-width:1000px){
+   nav{
+       display: contents;
+   }
+}
+
+nav ul{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+@media screen and (min-width:1000px) {
+   nav ul{
+       display: flex;
+       justify-content: space-evenly;
+      }
+}
+
+nav li{
+   margin-top: 1em;
+   margin-bottom: 1em;
+   margin-left: 1em;
+}
+
+@media screen and (min-width:1000px) {
+   nav li{
+       margin-top: 20px;
+       margin-left: 18px;
+   }
+}
+
+nav a {
+   text-decoration: none;
+   color: rgb(255, 255, 255);
+   font-size: 1rem;
+   text-transform: uppercase;
+   padding: 10px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (min-width:900px) {
+   nav a {
+      font-size: 1.2rem;
+   }
+}
+
+nav a:hover {
+   color: rgb(57, 9, 201);
+}
+
+.nav_toggle:checked~nav {
+   display: block;
+   position: relative;
+}
+
+
+.nav_toggle{
+   display: none;
+}
+
+
+.nav_toggle_label{
+   position: absolute;
+   top: 0;
+   left: 0;
+   margin-left: 1em;
+   height: 100%;
+   display: flex;
+   align-items: left;
+}
+
+@media screen and (min-width:1000px) {
+   .nav_toggle_label{
+       display: none;
+   }
+}
+
+.nav_toggle_label{
+   margin: 15px;
+   color: #eee;
+}
+
+.search_bar{
+   position: relative;
+   margin: auto;
+   margin-left: 10px;
+   height: 25%;
+   background: rgba(255, 252, 252, 0.884);
+   opacity: 80%;
+   margin-right: 10px;
+   margin-top: 20px;
+   border-top-left-radius: 25px;
+   border-top-right-radius:25px ;
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+   border: none;
+}
+
+.search_bar::placeholder{
+   text-align: left;
+   font-size: 15px;
+   padding-left:5px;
+}
+
+#search_mag{
+   position: absolute;
+} 
+
+/* Header ends */
+
+/* Home Page starts */
+
+/* About us section start */
+
+.about_us{
+   display: flex;
+   flex-direction: column;
+   background-color:rgb(241, 239, 239);
+   width: 98vw;
+   height: 45vh;
+   align-items: center;
+   position: relative;
+}
+
+@media screen and (min-width:900px) {
+   .about_us{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 10px;
+      width: 95vw;
+
+   }
+}
+
+.about_details{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-top: 5px;
+   
+}
+
+@media screen and (min-width:900px) {
+   .about_details{
+   
+   float: right;
+   }
+}
+
+.about_store_description{
+      position: inherit;
+      font-size: 12px;
+      text-align: justify;
+      padding: 5px;
+      width: 95%;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@media screen and (min-width:900px) {
+   .about_store_description{
+      font-size: 1.2rem;
+      text-align: justify;
+      padding: 10px;
+      margin-top: 2rem;
+      margin-left: 15px;
+      line-height: 30px;
+   }
+}
+
+.about_button{
+   width: 30%;
+   height: 15%;
+   margin: auto;
+   margin-top: -0.5rem;
+   text-transform: capitalize;
+   cursor: pointer;
+   background-color: #2e5090;
+   border: none;
+   border-top-left-radius: 10px;
+   border-top-right-radius:10px ;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   font-size: 15px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.about_button:hover{
+   background-color: #426ebf;
+}
+
+.about_button a{
+   text-decoration: none;
+   color: rgb(255, 245, 245);
+}
+
+.about_image{
+   width: 50vw;
+   height: 20vw;
+   margin-top: 10px;
+}
+
+@media screen and (min-width:900px) {
+   .about_image{
+      margin-left: 5px;
+      width: 45vw;
+   }
+}
+
+/* About us section ends */
+
+/* Contact us section starts */
+.contact_us{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   background-color: #d2d3d6e7;
+   width: 98vw;
+   height:75vh;
+   align-items: center;
+   position: relative;
+   text-align: center;
+}
+
+@media screen and (min-width:800px) {
+   .contact_us{
+      height: 45vh;
+      width: 70vw;
+      margin: auto;
+      
+   }
+}
+
+/* @media screen and (max-width:550px){
+   .contact_us{
+      height: 80vh;
+      margin-right: -15px;
+   }
+} */
+
+.contact_head{
+   font-size: 3rem;
+   margin: 0%;
+   font-family: 'Playfair Display', serif;
+}
+
+.contact_button{
+   border-top-left-radius: 10px;
+   border-top-right-radius:10px ;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   margin: 0.5rem;
+   text-transform: capitalize;
+   cursor: pointer;
+   border: none;
+   background-color: #2e5090;
+   width: 20%;
+   height: 10%;
+   font-size: 1rem;
+}
+
+@media screen and (min-width:900px) {
+      .contact_button{
+         width: 18%;
+         height: 6%;
+         font-size: 20px;
+      }
+}
+
+.contact_button a {
+   text-decoration: none;
+   color: white;
+}
+
+.contact_button:hover{
+   background-color: #426ebf;
+}
+
+.contact_icons{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+.contact_icons i{
+   padding: 25px;
+   margin-top: -8px;
+}
+
+.contact_icons h4{
+   margin: 0%;
+   text-transform: uppercase;
+   font-weight: 250;
+   font-size: 15px;
+}
+
+.minor_details{
+   text-transform: uppercase;
+   font-size: 10px;
+   font-weight: 50;
+   margin: 0%;
+   padding: 10px;
+   text-align: justify;
+   line-height: 20px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact_reasons{
+   text-align: justify;
+   padding: 5px;
+   font-size: 12px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   margin: auto;
+   line-height: 20px;
+}
+
+
+@media screen and (min-width:500px) {
+   .contact_reasons{
+      font-size: 1rem;
+      width: 80%;
+      line-height: 30px;
+   }
+}
+
+/* Contact us section ends */
+
+
+
+/* Product Slide starts might use dunno */
+
+.card-holder{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+ }
+
+  .product-card{
+   background-color: rgb(199, 199, 199);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 5px;
+   margin-right: 15px;
+   box-shadow: rgb(22, 22, 31) 4px 4px 2px 1px;
+ } 
+ 
+ .product_images{
+   object-fit: contain;
+   height: 18em;
+   width: 18em;
+   align-items: center;
+   padding: 5px;
+   
+ }
+
+ .category_header{
+   margin-top: 5px;
+   text-align: center;
+   font-size: 30px;
+ }
+ /* Product slides ends */
+
+ 
+
+ /* Main page ends */
+
+/* About page  starts*/
+
+.team_intro{
+   width: 95vw;
+   height: 45vh;
+   background-color: #838FBB;
+   margin: auto;
+   text-align: center;
+   margin-bottom: 5px;
+}
+
+.intro_saying{
+   font-size: 3rem;
+   padding-top: 2rem;
+}
+
+.shop_description_container{
+   margin-top: 3rem;
+   font-size: 20px;
+   text-align: justify;
+   padding: 10px;
+}
+
+.head_text{
+font-size: 45px;
+text-align: center;
+}
+
+.team{
+   text-align: center;
+}
+
+@media screen and (min-width:900px) {
+   .team{
+      display: flex;
+   }
+}
+
+.team_description{
+   text-align: justify;
+   text-align: center;
+}
+
+.team_img{
+   margin-left: 4rem;
+}
+
+.team_img1{
+   margin-right:4rem;
+}
+
+.description{
+   text-align: justify;
+   width:98vw;
+   font-size: 20px;
+}
+
+@media screen and (min-width:900px) {
+
+   .description{
+      width: 80%;
+      margin-left:5rem;
+      font-size: 25px;
+   }
+}
+
+.description_1{
+   text-align: justify;
+   width:98vw;
+   font-size: 20px;
+}
+
+@media screen and (min-width:900px) {
+   .description_1{ 
+      width: 80%;
+      margin-left:4rem;
+      font-size: 25px;
+   }
+}
+
+/* ABout page ends */
+
+/* Contact Page starts*/
+
+.contact_details{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-top: 1rem;
+   
+   
+}
+
+@media screen and (min-width:900px) {
+   .contact_details{
+      margin-top: 5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 2rem;
+   }
+}
+
+li{
+   list-style: none;
+   font-weight: bold;
+   font-size: 20px;
+   padding-bottom: 10px;
+   padding-left: 0%;
+   text-align: center;
+   line-height: 15px;
+}
+
+@media screen and (min-width:1000px){
+   li{
+      text-align: left;
+   }
+}
+
+.social_icons ul{
+   display: flex;
+}
+
+.social_icons ul li {
+   padding: 5px;
+  align-items: center;
+   color: #eee;
+
+}
+
+.social_icons li:hover{
+   color:rgb(168, 165, 165);
+   font-size: 18px;
+}
+
+.contact_para{
+   text-align: center;
+   width: 80%;
+   font-size: 20px;
+   margin: auto;
+   margin-top: -10px;
+}
+
+@media screen and (min-width:1000px) {
+   .contact_para{
+      text-align: justify;
+      width: 80%;
+      font-size: 20px;
+      padding-left: 2px;
+      margin-top: -10px;
+      margin-left: 2px;
+   }
+}
+
+.contact_header{
+   text-align: center;
+   font-size: 35px;
+} 
+
+@media screen and (min-width:1000px) {
+   .contact_header{
+      text-align: left;
+      font-size: 35px;
+   } 
+}
+
+/* Contact Form */
+.contact_form{
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+}
+
+@media screen and (min-width:1000px) {
+   .contact_form{
+   margin-right: 10px;
+   padding: 5px;
+   }
+}
+
+.contact_form_inputs{
+   display: flex;
+   flex-direction: column;
+}
+
+.forms{
+   display: flex;
+   flex-direction: column;
+   width: 25rem;
+   height: 1.5rem;
+   margin-bottom: 2px;
+}
+
+form input{
+   font-size: 20px;
+}
+
+.forms::placeholder{
+   text-align: left;
+   font-size: 18px;
+   padding: 5px;
+}
+
+@media screen and (min-width:1000px) {
+   .forms{
+      width: 35rem;
+      height: 1.5rem;
+   }
+}
+
+.message_area{
+   width: 25rem;
+   height: 10rem;
+}
+
+.message_area::placeholder{
+   text-align: left;
+   font-size: 18px;
+}
+
+@media screen and (min-width:1000px) {
+   .message_area{
+      width: 35rem;
+      height: 10rem;
+   }
+}
+
+.contact_button2{
+   color: white;
+   height: 2rem;
+   width: 5rem;
+   margin: auto;
+   font-size: 15px;
+   margin-top: 5px;
+   border-top-left-radius: 10px;
+   border-top-right-radius:10px ;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   text-transform: capitalize;
+   cursor: pointer;
+   border: none;
+   background-color: #2b3038;
+}
+
+@media screen and (min-width:1000px) {
+   .contact_button2{
+      margin: 0%; 
+      margin-top: 5px;
+   }
+}
+
+.contact_button2:hover{
+   background-color: #426ebf;
+}
+
+/* Contact form end */
+
+/* Contact page ends */
+
+/* Login / Signup Form */
+
+container .content h1{
+   font-size: 40px;
+   color:#333;
+   text-align: center;
+}
+
+container .content h1 span{
+   background: #2e5090;
+   color:#fff;
+   border-radius: 5px;
+   padding:0 15px;
+}
+
+/* Forms display */
+.form_container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-bottom: 60px;
+}
+
+.form_container form{
+   padding:20px;
+   border-radius: 5px;
+   box-shadow: 0 6px 10px rgba(0,0,0,.1);
+   background: #fff;
+   text-align: center;
+   width: 550px;
+}
+
+.form_container form h2{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 40px;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   color:rgb(0, 0, 0);
+}
+
+.form_container form input,
+.form_container form select{
+   width: 90%;
+   padding:10px 15px;
+   font-size: 17px;
+   margin:8px 0;
+   background: #eee;
+   border-radius: 5px;
+   border: none;
+   
+}
+
+.form_container form select option{
+   background: #fff;
+}
+
+.form_container form .submit_btn{
+   background:#426ebf;
+   color:#2e5090;
+   text-transform: capitalize;
+   font-size: 20px;
+   cursor: pointer;
+   color: black;
+}
+
+.form_container form .submit_btn:hover{
+   background: #1c3159;
+   color:#fff;
+}
+
+.form_container form p{
+   margin-top: 10px;
+   font-size: 20px;
+   color:rgb(0, 0, 0);
+}
+
+.form_container form p a{
+   color:#2e5090;
+}
+
+.form_container form .error_message{
+   margin:10px 0;
+   display: block;
+   background: #2e5090;
+   color:#fff;
+   border-radius: 5px;
+   font-size: 20px;
+   padding:10px;
+}
+
+/* User Forms ends */
+
+/* Swipper */
+
+.swiper{
+   width: fit-content;
+   height: fit-content;
+}
+
+/* Swiper ends */
+
+
+
+/* Footer */
+
+footer{
+   margin: auto;
+}
+
+footer li{
+   transform: all 2s ease-in-out;
+   font-size: 15px;
+   font-weight: 100;
+   cursor: pointer;
+   text-align: center;
+}
+
+@media screen and (min-width:600px) {
+   footer li{
+      font-size: 20px;
+   }
+}
+
+footer li:hover{
+   color:rgb(168, 165, 165);
+   font-size: 18px;
+}
+
+h3 {
+   text-align: center;
+   font-size: 30px;
+}
+
+.location_head{
+   margin-bottom: 8rem;
+}
+
+.social_share ul{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: -55px;
+}
+
+.social_share li{
+   margin: 5px;
+   list-style: none;
+   font-size: rem;
+   transform: all 5s ease-in-out;
+   
+}
+
+.general_info{
+   display: inline;
+   justify-content: space-evenly;
+   align-items: center;
+   margin: 15px;
+   list-style: none;
+}
+
+@media screen and (min-width:500px) {
+   .general_info{
+      display: flex;
+      justify-content: space-evenly;
+   }
+}
+
+/* Footer ends */
+
+/* Banner For some reason I cant move it into the Home Page  Section it stops working*/
+.swiper {
+   width: 98vw;
+   height:50vh;
+   margin-left: -10px;
+   margin-right: 10px;
+ }
+
+ .swiper-slide img{
+   object-fit: cover;
+   width: 98vw;
+ }
+
+ /* Images and quotes */
+ .image_quotes{
+   display: flex;
+   justify-content: space-evenly;
+ }
+
+ .swiper2 {
+   width: 300px;
+   height: 300px;
+ }
+
+ .swiper-wrapper2 img {
+   width: 50px;
+   height: 50px;
+ }
+
+
+
+ 

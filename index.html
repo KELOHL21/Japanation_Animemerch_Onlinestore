@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Boostrap CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+      <!-- Script -->
+
+      <!-- vue script -->
+      <script src="https://unpkg.com/vue@3" ></script>
+
+      <!-- axios cdn -->
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+      <!-- my scripts -->
+      <script src ="src/javascript/index.js" defer></script>
+
+      <!-- swipper -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+         
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+      <!-- awesomeFonts script -->
+      <script src="https://kit.fontawesome.com/45c101dd7d.js" crossorigin="anonymous"></script>
+
+      <!-- My Stylesheet -->
+      <link rel="stylesheet" href="./src/stylesheet/stylesheet.css">
+      
+      
+      
+         <title>Japanimation HomePage</title>
+      
+   </head>
+
+   <header class="nav_container">
+   
+         <!-- <img src="" alt="store_logo" class="store_logo"> -->
+         <p>Logo</p>
+      
+         <input type="checkbox" id="nav_toggle" class="nav_toggle">
+         <nav>
+            <ul>
+            <li><a href="./src/pages/login.html"><i class="fa-solid fa-user "></i></a></li>
+            <li><a href="#">Home</a></li> 
+            <li><a href="./src/pages/about.html">About Us</a></li>  
+            <li><a href="#">Cart</a></li>
+            <li><a href="./src/pages/contact.html">Contact Us</a></li>
+            <li></li> 
+            <input type="text" id="search_bar" class="search_bar" placeholder="Search"/></input>
+            </ul>
+         </nav>   
+         <label for="nav_toggle" class="nav_toggle_label">
+            <span><i class="fa-solid fa-bars fa-2xl"></i></span>
+         </label>
+      
+   </header> 
+
+   <body>
+
+      <container class="banner">
+      <!-- Slider main container -->
+         <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+               <!-- Slides -->
+                  <div class="swiper-slide" data-swiper-autoplay="3000">
+                     <img src="./src/images/banner/myheroacademia.jpg" alt="banner_image">
+                  </div>
+   
+                  <div class="swiper-slide">
+                     <img src="./src/images/banner/demonslayer.jpg" alt="banner_image">
+                  </div>
+   
+                  <div class="swiper-slide">
+                     <img src="./src/images/banner/jujustu kaisen.jpg" alt="banner_image">
+                  </div>
+   
+                  <div class="swiper-slide">
+                     <img src="./src/images/banner/naruto.jpg" alt="banner_image">
+                  </div>
+   
+                  <div class="swiper-slide" >
+                     <img src="./src/images/banner/onepiece.jpg" alt="banner_image">
+                  </div>
+
+            </div>
+
+         </div>
+
+      </container>
+   
+      <main id="main" class="main">
+
+            <!-- Hoodies -->
+               <container id="hoodies" class="hoodies">
+                  <h2 class="category_header">Hoodies</h2>
+                  <div class="card-holder">
+
+                     <div id="product-card" class="product-card" v-for="item in hoodies">
+                              <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
+                              <h4>{{ item.product_name }}</h4>
+
+                              <img class="product_images" v-bind:src="'./src/images/hoodies/' + item.product_pic">
+
+                              <p>R{{ item.product_price }}-00</p>
+
+                              <p>{{ item.product_desc}}</p>
+
+                              <input type="submit" name="view" value="View" class="btn"/>
+                     </div>
+
+                  </div>
+
+               </container>
+
+         </section>
+       
+         <!-- featured products section 
+         
+         Featured section ended -->
+   
+         <section class="about_us">
+      
+               <div class="about_us_image">
+   
+                  <img src="./src/images/staff/aboutus.jpg" class="about_image">
+   
+               </div>
+         
+               <div class="about_details">
+         
+                  <p class="about_store_description">Japanimation is a retail experience created for fans of anime and anime culture. We carry 100% officially licensed EXCLUSIVE clothing from the biggest names in anime like Dragon Ball Z, Cowboy Bebop, My Hero Academia, Crunchyroll, and many more.It started in 2010 and has grown bigger than ever anticipated.</p>
+         
+                  <button type="button" class="about_button"><a href="./src/pages/about.html">Learn More</a></button>
+         
+               </div>
+   
+      
+         </section>
+   
+         <!-- T-shirt -->
+
+         <container id="t-shirts" class="t-shirts">
+            <h2 class="category_header">T-shirt</h2>
+            <div class="card-holder">
+
+               <div id="product-card" class="product-card" v-for="item in t_shirts">
+                        <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
+                        <h4>{{ item.product_name }}</h4>
+
+                        <img class="product_images" v-bind:src="'./src/images/t-shirts/' + item.product_pic">
+
+                        <p>R{{ item.product_price }}-00</p>
+
+                        <p>{{ item.product_desc}}</p>
+
+                        <input type="submit" name="view" value="View" class="btn"/>
+               </div>
+
+            </div>
+
+         </container>
+
+         <!-- Trying something -->
+
+         <!-- Slider main container -->
+      <!-- <container class="image_quotes" >
+
+          Quotes
+         <div class="swiper2">
+            <!-- Additional required wrapper 
+            <div class="swiper-wrapper2">
+
+            <!-- Slides 
+            <div class="swiper-slide"><img src="./src/images/images+quotes/quotes/Blue-Period-.png"></div>
+            <div class="swiper-slide"><img src="./src/images/images+quotes/quotes/Jujutsu-Kaisen.png"></div>
+            <div class="swiper-slide"><img src="./src/images/images+quotes/quotes/tokoyorevengers.png"></div>
+            <div class="swiper-slide"><img src="./src/images/images+quotes/quotes/vinland.png"></div>
+
+            </div>
+         </div>
+
+         <!-- Images 
+         <div class="swiper2">
+            <!-- Additional required wrapper 
+            <div class="swiper-wrapper2">
+            <!-- Slides 
+            <div class="swiper-slide"><img src="./src/images/images+quotes/Blue-Period-.png"></div>
+            <div class="swiper-slide"><img src="./src/images/images+quotes/Jujutsu-Kaisen.png"></div>
+            <div class="swiper-slide"><img src="./src/images/images+quotes/tokoyorevengers.png"></div>
+            <div class="swiper-slide"><img src="./src/images/images+quotes/vinland.jpg"></div>
+            </div>
+         </div>
+
+      </container>    -->
+
+      <container id="new" class="new">
+         <h2 class="category_header">T-shirt</h2>
+         <div class="card-holder">
+
+            <div id="product-card" class="product-card" v-for="item in upcoming">
+                     <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
+                     <h4>{{ item.product_name }}</h4>
+
+                     <img class="product_images" v-bind:src="'./src/images' + item.product_pic">
+
+                     <p>R{{ item.product_price }}-00</p>
+
+                     <p>{{ item.product_desc}}</p>
+
+                     <input type="submit" name="view" value="View" class="btn"/>
+            </div>
+
+         </div>
+
+      </container>
+
+         <container class="contact_us">
+   
+               <h1 class="contact_head">Contact Us</h1>
+   
+               <div class="custom_designs">
+   
+                  <p class="contact_reasons">If you want to create personalized shirts, hoodies, and much more with our online editor give us a ring. Alternatively if there are any issues that you are experiencing whether it be our customer service or with our products please inform us.</p>
+   
+               </div>
+   
+               <div class="contact_icons">
+                  <div class="location">
+                     <i class="fa-solid fa-map-location fa-4x"></i>
+                     <h4>Location</h4>
+                     <p class="minor_details">7 Dreyer St, Claremont</p>
+                  </div>
+                  <div class="phone_number">
+                     <i class="fa-solid fa-mobile fa-4x"></i>
+                     <h4>Phone</h4>
+                     <p class="minor_details">0745721123</p>
+                  </div>
+                  <div class="email">
+                     <i class="fa-solid fa-envelope fa-4x"></i>
+                     <h4>Email</h4>
+                     <p class="minor_details">Japanimation.co.za</p>
+                  </div>
+               </div>
+   
+            <button type="button" class="contact_button"><a href="./src/pages/contact.html">Contact Form</a></button>
+      
+         </container>
+
+         <!-- Upcoming section starts -->
+         
+         <!-- upcoming section ending -->
+
+      </main>
+
+
+      <!-- Boostrap JavaScript Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+   </body>
+   
+   <footer>
+
+      <div class="social_share">
+         <h3>Social Media</h3>
+         <ul>
+         <li><i class="fa-brands fa-facebook-square fa-2xl"></i></li>
+         <li><i class="fa-brands fa-twitter-square fa-2xl"></i></li>
+         <li><i class="fa-brands fa-instagram-square fa-2xl"></i></li>
+         <li><i class="fa-brands fa-pinterest-square fa-2xl"></i></li>
+         </ul>
+      </div>
+   
+      <div class="general_info">
+   
+         <div class="store_location">
+            <h3 class="location_head">Location</h3>
+           <li class="map_location">Boo</li>
+   
+         </div>
+   
+         <div class="help_links">
+            <h3>Help links</h3>
+            <li>Help</li>
+            <li>Contact us</li>
+            <li>Legal Terms and Conditions</li>
+            <li>Delivery times</li>
+         </div>
+         <div class="privacy_legal">
+            <h3>Privacy & legal</h3>
+            <li>Privacy Policy</li>
+            <li>PAIA Manual</li>
+            <li>Customer Service</li>
+            <li>Store Locator</li>
+         </div>
+      </div>
+   </footer>
+</html>
+
+
+   
