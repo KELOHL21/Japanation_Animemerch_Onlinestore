@@ -99,23 +99,25 @@
 
             <!-- Hoodies -->
                <container id="hoodies" class="hoodies">
+
                   <h2 class="category_header">Hoodies</h2>
-                  <div class="card-holder">
 
-                     <div id="product-card" class="product-card" v-for="item in hoodies">
-                              <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
-                              <h4>{{ item.product_name }}</h4>
-
-                              <img class="product_images" v-bind:src="'./src/images/hoodies/' + item.product_pic">
-
-                              <p>R{{ item.product_price }}-00</p>
-
-                              <p>{{ item.product_desc}}</p>
-
-                              <input type="submit" name="view" value="View" class="btn"/>
+                     <div class="card-holder">
+   
+                        <div id="product-card" class="product-card" v-for="item in hoodies">
+                                 <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
+                                 <h4>{{ item.product_name }}</h4>
+   
+                                 <img class="product_images" v-bind:src="'./src/images/hoodies/' + item.product_pic">
+   
+                                 <p>R{{ item.product_price }}-00</p>
+   
+                                 <p>{{ item.product_desc}}</p>
+   
+                                 <input type="submit" name="view" value="View" class="btn"/>
+                        </div>
+   
                      </div>
-
-                  </div>
 
                </container>
 
@@ -147,23 +149,25 @@
          <!-- T-shirt -->
 
          <container id="t-shirts" class="t-shirts">
+
             <h2 class="category_header">T-shirt</h2>
-            <div class="card-holder">
 
-               <div id="product-card" class="product-card" v-for="item in t_shirts">
-                        <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
-                        <h4>{{ item.product_name }}</h4>
-
-                        <img class="product_images" v-bind:src="'./src/images/t-shirts/' + item.product_pic">
-
-                        <p>R{{ item.product_price }}-00</p>
-
-                        <p>{{ item.product_desc}}</p>
-
-                        <input type="submit" name="view" value="View" class="btn"/>
+               <div class="card-holder">
+   
+                  <div id="product-card" class="product-card" v-for="item in t_shirts">
+                           <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
+                           <h4>{{ item.product_name }}</h4>
+   
+                           <img class="product_images" v-bind:src="'./src/images/t-shirts/' + item.product_pic">
+   
+                           <p>R{{ item.product_price }}-00</p>
+   
+                           <p>{{ item.product_desc}}</p>
+   
+                           <input type="submit" name="view" value="View" class="btn"/>
+                  </div>
+   
                </div>
-
-            </div>
 
          </container>
 
@@ -201,23 +205,25 @@
       </container>    -->
 
       <container id="new" class="new">
-         <h2 class="category_header">T-shirt</h2>
-         <div class="card-holder">
 
-            <div id="product-card" class="product-card" v-for="item in upcoming">
-                     <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
-                     <h4>{{ item.product_name }}</h4>
+         <h2 class="category_header">Upcoming</h2>
 
-                     <img class="product_images" v-bind:src="'./src/images' + item.product_pic">
-
-                     <p>R{{ item.product_price }}-00</p>
-
-                     <p>{{ item.product_desc}}</p>
-
-                     <input type="submit" name="view" value="View" class="btn"/>
+            <div class="card-holder">
+   
+               <div id="product-card" class="product-card" v-for="item in upcoming">
+                        <textarea hidden name="selectedProductID">{{ item.product_id}}</textarea>
+                        <h4>{{ item.product_name }}</h4>
+   
+                        <img class="product_images" v-bind:src="'./src/images' + item.product_pic">
+   
+                        <p>R{{ item.product_price }}-00</p>
+   
+                        <p>{{ item.product_desc}}</p>
+   
+                        <input type="submit" name="view" value="View" class="btn"/>
+               </div>
+   
             </div>
-
-         </div>
 
       </container>
 
@@ -277,7 +283,7 @@
          </ul>
       </div>
    
-      <div class="general_info">
+      <div class="general_info" class="foot_columns">
    
          <div class="store_location">
             <h3 class="location_head">Location</h3>
@@ -285,21 +291,24 @@
    
          </div>
    
-         <div class="help_links">
+         <div class="help_links" class="foot_columns">
             <h3>Help links</h3>
             <li>Help</li>
             <li>Contact us</li>
             <li>Legal Terms and Conditions</li>
             <li>Delivery times</li>
          </div>
-         <div class="privacy_legal">
+
+         <div class="privacy_legal" class="foot_columns">
             <h3>Privacy & legal</h3>
             <li>Privacy Policy</li>
             <li>PAIA Manual</li>
             <li>Customer Service</li>
             <li>Store Locator</li>
          </div>
+
       </div>
+      
    </footer>
 </html>
 
