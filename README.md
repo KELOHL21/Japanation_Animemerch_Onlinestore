@@ -24,4 +24,4 @@
 <li>Cart</li>
 </ul>
 
-<h3>Big thanks to Michael Moore, really appreciated
+<h3>Big thanks to Michael Moore, really appreciated</h3>
