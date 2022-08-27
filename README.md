@@ -12,7 +12,7 @@
 <li>Forgot Password</li>
 <li>HomePage</li>
 <li>About and Contacts Pages</li>
-<ul>
+</ul>
 
 <h2>Backlog</h2>
 <ul>
