@@ -6,7 +6,6 @@
 <p>Japanimation is a Fullstack E-commerce store project built with HTML, CSS, JS, VUE, AXIOS, MySql, PHP, & SLIM. The store is fun and easy on the eyes its also easy to navigate.</p>
 
 <h2>Feature</h2>
-<hr>
 <ul>
 <li>Product Sections</li>
 <li>Sign In, Sign Out</li>
@@ -16,7 +15,6 @@
 <ul>
 
 <h2>Backlog</h2>
-<hr>
 <ul>
 <li>Media Queries</li>
 <li>Design Wise</li>
